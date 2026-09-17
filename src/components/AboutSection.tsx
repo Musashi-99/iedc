@@ -2,8 +2,8 @@ import { ArrowRight } from 'lucide-react'
 
 export default function AboutSection() {
   return (
-    <section id="about" className="bg-white py-20">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-2">
+    <section id="about" className="overflow-hidden bg-white py-12 sm:py-20">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-12">
         <div>
           <p className="text-xs font-semibold uppercase tracking-widest text-brand-blue">
             — About IEDC Lab
@@ -19,18 +19,18 @@ export default function AboutSection() {
             We provide a platform for ideation, mentorship, resources and real-world exposure to
             help young minds build innovative solutions for a better tomorrow.
           </p>
-          <button className="mt-6 flex items-center gap-2 rounded-full border border-brand-blue px-6 py-3 text-sm font-semibold text-brand-blue hover:bg-brand-blue hover:text-white">
+          <button className="mt-6 flex min-h-11 items-center gap-2 rounded-full border border-brand-blue px-6 py-3 text-sm font-semibold text-brand-blue hover:bg-brand-blue hover:text-white">
             Know More
             <ArrowRight size={16} />
           </button>
         </div>
 
         <div className="relative">
-          <div className="absolute -left-4 top-6 h-full w-full rounded-2xl bg-sky-100" />
+          <div className="absolute left-0 top-6 h-full w-full rounded-2xl bg-sky-100 sm:-left-4" />
           <img
             src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80"
             alt="Dream Build Grow workspace"
-            className="relative h-80 w-full rounded-2xl object-cover shadow-xl"
+            className="relative h-56 w-full rounded-2xl object-cover shadow-xl sm:h-80"
           />
         </div>
       </div>

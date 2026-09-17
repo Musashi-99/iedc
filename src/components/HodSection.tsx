@@ -1,13 +1,15 @@
+import hodPhoto from '../assets/maumita-chakraborty.jpg'
+
 export default function HodSection() {
   return (
-    <section id="hod" className="bg-sky-50 py-20">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 lg:grid-cols-[0.7fr_1fr_0.7fr]">
-        <div className="relative">
-          <div className="absolute -left-3 -top-3 h-full w-full rounded-2xl bg-sky-100" />
+    <section id="hod" className="overflow-hidden bg-sky-50 py-12 sm:py-20">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-4 sm:px-6 lg:grid-cols-[0.7fr_1fr_0.7fr] lg:gap-10">
+        <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+          <div className="absolute left-0 top-0 h-full w-full rounded-2xl bg-sky-100 sm:-left-3 sm:-top-3" />
           <img
-            src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80"
+            src={hodPhoto}
             alt="Prof. (Dr.) Maumita Chakraborty"
-            className="relative h-72 w-full rounded-2xl object-cover shadow-xl"
+            className="relative h-64 w-full rounded-2xl object-cover object-[center_18%] shadow-xl sm:h-72"
           />
         </div>
 
@@ -15,7 +17,7 @@ export default function HodSection() {
           <p className="text-xs font-semibold uppercase tracking-widest text-brand-blue">
             — From HoD's Desk
           </p>
-          <h3 className="mt-3 text-2xl font-extrabold text-navy-900">
+          <h3 className="mt-3 text-xl font-extrabold text-navy-900 sm:text-2xl">
             Prof. (Dr.) Maumita Chakraborty
           </h3>
           <p className="mt-1 text-sm font-medium text-slate-500">Head of the Department &amp; IEDC</p>

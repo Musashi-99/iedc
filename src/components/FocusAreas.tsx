@@ -40,8 +40,8 @@ const AREAS = [
 
 export default function FocusAreas() {
   return (
-    <section className="bg-white py-20">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="activities" className="bg-slate-50 py-12 sm:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <p className="text-xs font-semibold uppercase tracking-widest text-brand-blue">
           — Our Focus Areas
         </p>
@@ -49,7 +49,7 @@ export default function FocusAreas() {
           Where Ideas Take Shape
         </h2>
 
-        <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-8 grid grid-cols-1 gap-4 sm:mt-10 sm:grid-cols-2 sm:gap-5 lg:grid-cols-5">
           {AREAS.map(({ icon: Icon, title, desc, bg, fg }) => (
             <div
               key={title}

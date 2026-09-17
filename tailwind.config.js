@@ -10,7 +10,7 @@ export default {
           800: '#123568',
         },
         brand: {
-          blue: '#1a5fc4',
+          blue: '#1463e0',
         },
       },
       fontFamily: {

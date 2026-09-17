@@ -1,5 +1,7 @@
 import { Lightbulb, Users, Rocket, ArrowRight } from 'lucide-react'
 import LoginCard from './LoginCard'
+import campusHero from '../assets/uem-campus.jpg'
+import campusHeroMobile from '../assets/uem-campus-mobile.jpg'
 
 const FEATURES = [
   { icon: Lightbulb, title: 'Learn', subtitle: 'Innovate' },
@@ -9,71 +11,74 @@ const FEATURES = [
 
 export default function HeroSection() {
   return (
-    <section
-      id="home"
-      className="relative overflow-hidden bg-slate-50"
-    >
+    <section id="home" className="relative min-h-[calc(100dvh-64px)] overflow-hidden sm:min-h-[calc(100dvh-73px)]">
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-90"
+        className="absolute inset-0 bg-cover bg-[center_top] bg-no-repeat md:hidden"
         style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1600&q=80')",
+          backgroundImage: `url(${campusHeroMobile})`,
+          filter: 'saturate(1.12) contrast(1.05) brightness(0.96)',
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-white/30" />
+      <div
+        className="absolute inset-0 hidden bg-cover bg-[center_42%] bg-no-repeat md:block"
+        style={{
+          backgroundImage: `url(${campusHero})`,
+          filter: 'saturate(1.12) contrast(1.05) brightness(0.96)',
+        }}
+      />
+      <div
+        className="absolute inset-0"
+        style={{
+          background: [
+            'linear-gradient(90deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.18) 34%, transparent 52%)',
+            'linear-gradient(180deg, rgba(56,140,220,0.22) 0%, transparent 28%)',
+          ].join(','),
+        }}
+      />
 
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 py-16 lg:grid-cols-[1.3fr_0.9fr] lg:py-24">
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-widest text-brand-blue">
-            — Innovation | Entrepreneurship | Development
-          </p>
-          <h1 className="mt-4 text-5xl font-extrabold leading-tight text-navy-900 sm:text-6xl">
-            Welcome to
-            <br />
-            <span className="text-brand-blue">IEDC Lab</span>
-          </h1>
-          <p className="mt-4 text-2xl font-semibold text-slate-700">Where Ideas Take Shape</p>
-          <p className="mt-4 max-w-md text-sm leading-relaxed text-slate-600">
-            Innovation &amp; Entrepreneurship Developement Cell empowers students to think beyond
-            boundaries, turn ideas into solutions and build a better tomorrow.
-          </p>
-
-          <div className="mt-8 flex flex-wrap gap-8">
-            {FEATURES.map(({ icon: Icon, title, subtitle }) => (
-              <div key={title} className="flex items-center gap-2">
-                <Icon size={20} className="text-brand-blue" />
-                <div className="text-sm font-medium text-slate-700 leading-tight">
-                  <div>{title}</div>
-                  <div>{subtitle}</div>
-                </div>
-              </div>
-            ))}
+      <div className="relative z-10 mx-auto flex min-h-[calc(100dvh-64px)] w-full max-w-7xl flex-col items-stretch justify-center gap-6 px-4 py-8 sm:min-h-[calc(100dvh-73px)] sm:px-6 sm:py-10 lg:flex-row lg:items-center lg:justify-between">
+        <div className="relative w-full max-w-[560px] rounded-2xl border border-white/50 bg-white/35 p-5 shadow-[0_20px_50px_rgba(8,40,86,0.28)] ring-1 ring-white/40 backdrop-blur-2xl sm:p-7">
+          <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-2xl">
+            <div className="absolute inset-0 bg-gradient-to-br from-white/55 via-white/10 to-sky-200/20" />
+            <div className="absolute -left-10 -top-16 h-40 w-56 rotate-12 bg-white/40 blur-2xl" />
           </div>
+          <div className="relative z-10">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#1463e0] sm:text-[11px] sm:tracking-[0.22em]">
+              — Innovation | Entrepreneurship | Development
+            </p>
+            <h1 className="mt-3 text-[32px] font-extrabold leading-[1.08] tracking-tight text-[#061833] sm:text-5xl lg:text-[62px]">
+              Welcome to
+              <br />
+              <span className="text-[#0d56d8]">IEDC Lab</span>
+            </h1>
+            <p className="mt-3 text-lg font-semibold text-[#12284a] sm:text-[22px]">Where Ideas Take Shape</p>
+            <p className="mt-3 max-w-[430px] text-sm leading-relaxed text-[#1c3558] sm:text-[15px]">
+              Innovation &amp; Entrepreneurship Developement Cell empowers students to think beyond
+              boundaries, turn ideas into solutions and build a better tomorrow.
+            </p>
 
-          <button className="mt-8 flex items-center gap-2 rounded-full bg-brand-blue px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-blue/30 hover:bg-navy-800">
-            Explore IEDC
-            <ArrowRight size={16} />
-          </button>
-
-          <div className="relative mt-4 hidden max-w-md lg:block">
-            <div className="relative mx-auto h-64 w-64">
-              <img
-                src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=500&q=80"
-                alt="Growth"
-                className="h-full w-full rounded-full object-cover opacity-90"
-                style={{ clipPath: 'ellipse(45% 48% at 50% 50%)' }}
-              />
-              <span className="absolute -right-6 top-8 rounded-full bg-white px-4 py-2 text-xs font-semibold text-slate-700 shadow-md">
-                Small Ideas
-              </span>
-              <span className="absolute -right-2 bottom-6 rounded-full bg-white px-4 py-2 text-xs font-semibold text-slate-700 shadow-md">
-                Big Impact
-              </span>
+            <div className="mt-6 flex flex-wrap gap-x-8 gap-y-4 sm:mt-8 sm:gap-9">
+              {FEATURES.map(({ icon: Icon, title, subtitle }) => (
+                <div key={title} className="flex items-center gap-2.5">
+                  <Icon size={18} className="text-[#0d56d8]" />
+                  <div className="text-[13px] font-semibold leading-tight text-[#12284a]">
+                    <div>{title}</div>
+                    <div>{subtitle}</div>
+                  </div>
+                </div>
+              ))}
             </div>
+
+            <button className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-full bg-[#0d56d8] px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-[#0d56d8]/40 hover:bg-[#0a45b0] sm:mt-8">
+              Explore IEDC
+              <ArrowRight size={16} />
+            </button>
           </div>
         </div>
 
-        <div className="flex items-start justify-center lg:justify-end">
+        <div className="hidden min-w-0 flex-1 lg:block" />
+
+        <div className="mx-auto w-full max-w-sm shrink-0 lg:mx-0 lg:ml-auto">
           <LoginCard />
         </div>
       </div>
