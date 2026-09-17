@@ -36,8 +36,9 @@ export default function HeroSection() {
         }}
       />
 
-      <div className="relative z-10 mx-auto flex min-h-[calc(100dvh-64px)] w-full max-w-7xl flex-col items-stretch justify-center gap-6 px-4 py-8 sm:min-h-[calc(100dvh-73px)] sm:px-6 sm:py-10 lg:flex-row lg:items-center lg:justify-between">
-        <div className="relative w-full max-w-[560px] rounded-2xl border border-white/50 bg-white/35 p-5 shadow-[0_20px_50px_rgba(8,40,86,0.28)] ring-1 ring-white/40 backdrop-blur-2xl sm:p-7">
+      <div className="relative z-10 min-h-[calc(100dvh-64px)] w-full sm:min-h-[calc(100dvh-73px)]">
+        <div className="flex min-h-[calc(100dvh-64px)] w-full flex-col justify-center gap-6 px-3 py-5 sm:min-h-[calc(100dvh-73px)] sm:px-4 lg:absolute lg:inset-x-5 lg:top-1/2 lg:min-h-0 lg:w-auto lg:-translate-y-1/2 lg:flex-row lg:items-start lg:justify-between lg:px-0 lg:py-0 xl:inset-x-6">
+        <div className="relative w-full max-w-[560px] shrink-0 rounded-2xl border border-white/50 bg-white/35 p-5 shadow-[0_20px_50px_rgba(8,40,86,0.28)] ring-1 ring-white/40 backdrop-blur-2xl sm:p-7 lg:max-w-[520px]">
           <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-2xl">
             <div className="absolute inset-0 bg-gradient-to-br from-white/55 via-white/10 to-sky-200/20" />
             <div className="absolute -left-10 -top-16 h-40 w-56 rotate-12 bg-white/40 blur-2xl" />
@@ -76,10 +77,9 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="hidden min-w-0 flex-1 lg:block" />
-
-        <div className="mx-auto w-full max-w-sm shrink-0 lg:mx-0 lg:ml-auto">
+        <div className="w-full max-w-sm shrink-0 lg:w-[24rem]">
           <LoginCard />
+        </div>
         </div>
       </div>
     </section>
